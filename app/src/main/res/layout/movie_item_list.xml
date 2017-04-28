@@ -6,7 +6,7 @@
         <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/iv_movie_poster_image"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/large_poster_height"
             android:scaleType="fitXY" />
 
 
