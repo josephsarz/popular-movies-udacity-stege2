@@ -11,23 +11,25 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-public class MovieDetails extends AppCompatActivity {
+
+public class MovieDetail extends AppCompatActivity {
 
     Movie bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_details);
+        setContentView(R.layout.activity_movie_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        bundle  = getIntent().getParcelableExtra(MainActivityFragment.EXTRA_PARCEABLE);
+
+            bundle = getIntent().getParcelableExtra(MainActivityFragment.EXTRA_PARCEABLE);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView releaseDate, overview, voteAverage;
-       // ImageView imageBackground = (ImageView) findViewById(R.id.image_background);
+        ImageView imageBackground = (ImageView) findViewById(R.id.image_background);
         ImageView posterBackground = (ImageView) findViewById(R.id.iv_movie_poster_image);
 
         releaseDate = (TextView) findViewById(R.id.tv_release_date);
@@ -42,9 +44,8 @@ public class MovieDetails extends AppCompatActivity {
             Picasso.with(getApplicationContext()).
                     load("http://image.tmdb.org/t/p/w185/" +bundle.getPosterPath()).into(posterBackground);
 
-          /*  Picasso.with(getApplicationContext()).
+            Picasso.with(getApplicationContext()).
                     load("http://image.tmdb.org/t/p/w185/" +bundle.getBackdropPath()).into(imageBackground);
-*/
         }
 
     }

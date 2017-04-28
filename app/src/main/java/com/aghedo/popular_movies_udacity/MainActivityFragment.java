@@ -161,7 +161,7 @@ public class MainActivityFragment extends Fragment implements MovieListAdapter.I
     @Override
     public void recyclerViewOnClick(int position) {
         Movie movie = movieList.get(position);
-        startActivity(new Intent(getActivity(), MovieDetails.class)
+        startActivity(new Intent(getActivity(), MovieDetail.class)
                 .putExtra(EXTRA_PARCEABLE, movie));
 
     }
