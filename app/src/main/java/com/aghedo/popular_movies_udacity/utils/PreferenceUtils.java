@@ -1,8 +1,10 @@
-package com.aghedo.popular_movies_udacity;
+package com.aghedo.popular_movies_udacity.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import com.aghedo.popular_movies_udacity.R;
 
 public class PreferenceUtils {
 

@@ -1,4 +1,4 @@
-package com.aghedo.popular_movies_udacity;
+package com.aghedo.popular_movies_udacity.ui.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A {@link PreferenceActivity} which implements and proxies the necessary calls
+ * A {@link android.preference.PreferenceActivity} which implements and proxies the necessary calls
  * to be used with AppCompat.
  */
 public abstract class AppCompatPreferenceActivity extends PreferenceActivity {

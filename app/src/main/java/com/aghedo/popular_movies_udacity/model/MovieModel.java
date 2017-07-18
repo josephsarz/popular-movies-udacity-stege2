@@ -1,16 +1,27 @@
-package com.aghedo.popular_movies_udacity;
+package com.aghedo.popular_movies_udacity.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+public class MovieModel implements Parcelable {
 
-public class Movie implements Parcelable {
+    public static final Creator<MovieModel> CREATOR = new Creator<MovieModel>() {
+        @Override
+        public MovieModel createFromParcel(Parcel in) {
+            return new MovieModel(in);
+        }
 
+        @Override
+        public MovieModel[] newArray(int size) {
+            return new MovieModel[size];
+        }
+    };
     private String id, title, backdropPath, posterPath, overview, average, releaseDate;
 
-    public Movie(){}
+    public MovieModel() {
+    }
 
-    protected Movie(Parcel in) {
+    protected MovieModel(Parcel in) {
         id = in.readString();
         title = in.readString();
         backdropPath = in.readString();
@@ -19,18 +30,6 @@ public class Movie implements Parcelable {
         average = in.readString();
         releaseDate = in.readString();
     }
-
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
-        @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
-        }
-
-        @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
-        }
-    };
 
     public String getId() {
         return id;
